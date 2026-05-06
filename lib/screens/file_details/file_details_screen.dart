@@ -5,6 +5,7 @@ import '../../models/file_model.dart';
 import '../../models/version_model.dart';
 import '../../models/comment_model.dart';
 import '../../services/version_service.dart';
+import '../../services/comment_service.dart';
 import '../../core/constants/app_colors.dart';
 import '../../providers/file_provider.dart';
 import '../file_upload/file_upload_screen.dart';
