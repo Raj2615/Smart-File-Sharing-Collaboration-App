@@ -1,0 +1,26 @@
+# Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js backend
+backend/node_modules/
+backend/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pub
+.pub-cache/
+.pub/
+pubspec.lock

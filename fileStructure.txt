@@ -1,0 +1,86 @@
+smart_file_sharing/
+├── lib/
+│   ├── main.dart                          # App entry point
+│   ├── app.dart                           # MaterialApp + routing
+│   │
+│   ├── core/                              # Shared utilities
+│   │   ├── constants/
+│   │   │   ├── app_colors.dart            # Color palette
+│   │   │   ├── app_strings.dart           # All text constants
+│   │   │   └── app_theme.dart             # ThemeData
+│   │   ├── utils/
+│   │   │   ├── date_formatter.dart        # Format timestamps
+│   │   │   ├── conflict_resolver.dart     # Conflict resolution logic
+│   │   │   └── validators.dart            # Input validators
+│   │   └── widgets/
+│   │       ├── custom_button.dart         # Reusable button
+│   │       ├── custom_textfield.dart      # Reusable text input
+│   │       └── empty_state_widget.dart    # Empty list placeholder
+│   │
+│   ├── models/                            # Data models (Hive compatible)
+│   │   ├── file_model.dart                # File entity
+│   │   ├── version_model.dart             # Version entity
+│   │   └── comment_model.dart             # Comment entity
+│   │
+│   ├── services/                          # Business logic services
+│   │   ├── hive_service.dart              # Hive init + box access
+│   │   ├── file_service.dart              # CRUD for files
+│   │   ├── version_service.dart           # Version management
+│   │   ├── comment_service.dart           # Comment management
+│   │   ├── sync_service.dart              # Online sync logic
+│   │   └── ai_service.dart               # Claude AI integration
+│   │
+│   ├── providers/                         # Riverpod state
+│   │   ├── file_provider.dart             # File state
+│   │   ├── version_provider.dart          # Version state
+│   │   ├── comment_provider.dart          # Comment state
+│   │   ├── search_provider.dart           # Search & filter state
+│   │   └── connectivity_provider.dart     # Online/offline state
+│   │
+│   └── screens/                           # All 5 UI screens
+│       ├── file_list/
+│       │   ├── file_list_screen.dart      # Screen 1
+│       │   └── widgets/
+│       │       ├── file_card.dart         # File tile widget
+│       │       └── file_type_badge.dart   # PDF/DOC/IMG badge
+│       ├── file_upload/
+│       │   ├── file_upload_screen.dart    # Screen 2
+│       │   └── widgets/
+│       │       └── type_selector.dart     # File type picker
+│       ├── file_details/
+│       │   ├── file_details_screen.dart   # Screen 3
+│       │   └── widgets/
+│       │       ├── version_timeline.dart  # Version history
+│       │       └── comment_tile.dart      # Single comment UI
+│       ├── shared_files/
+│       │   ├── shared_files_screen.dart   # Screen 4
+│       │   └── widgets/
+│       │       └── shared_badge.dart      # Shared indicator
+│       └── search_filter/
+│           ├── search_filter_screen.dart  # Screen 5
+│           └── widgets/
+│               └── filter_chip_row.dart   # Type/shared filters
+│
+├── backend/                               # Node.js backend
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── db.js                      # MongoDB connection
+│   │   ├── models/
+│   │   │   ├── File.js                    # Mongoose File schema
+│   │   │   ├── Version.js                 # Mongoose Version schema
+│   │   │   └── Comment.js                 # Mongoose Comment schema
+│   │   ├── routes/
+│   │   │   ├── fileRoutes.js              # /api/files
+│   │   │   ├── versionRoutes.js           # /api/versions
+│   │   │   └── commentRoutes.js           # /api/comments
+│   │   ├── controllers/
+│   │   │   ├── fileController.js
+│   │   │   ├── versionController.js
+│   │   │   └── commentController.js
+│   │   └── middleware/
+│   │       └── errorHandler.js
+│   ├── server.js                          # Express entry point
+│   └── package.json
+│
+├── pubspec.yaml                           # Flutter dependencies
+└── README.md
